@@ -1,0 +1,43 @@
+<section class="mx-auto mt-16 mb-32 text-center lg:max-w-7xl">
+  <div class="bg-white rounded-md">
+
+    <table class="w-full border rounded-md">
+      <thead class="text-left border bg-slate-200 rounded-t-md">
+        <th class="p-2">Producto</th>
+        <th class="p-2">Precio Unidad</th>
+        <th class="w-24 p-2">Cantidad</th>
+        <th class="p-2">Total</th>
+      </thead>
+      <tbody>
+        @for (item of productos; track $index) {
+        <tr class="text-left border">
+          <td class="p-2">
+            <p-autoComplete class="block w-full" [(ngModel)]="item.name" [suggestions]="suggestions"
+              (completeMethod)="search($event)" />
+          </td>
+          <td class="p-2">
+            {{item.price|currency}}
+          </td>
+          <td class="p-2">
+            <p-inputNumber inputId="integeronly" [(ngModel)]="item.quantity" size="small" showButtons />
+          </td>
+          <td class="p-2 text-right">
+
+            {{item.quantity*item.price|currency}}
+          </td>
+        </tr>
+        }
+        <tr class="text-left border">
+          <td class="p-2">
+            <p-autoComplete class="w-full" [(ngModel)]="selectedItem" [suggestions]="suggestions"
+              (completeMethod)="search($event)" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+<section class="my-64"></section>

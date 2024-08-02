@@ -1,0 +1,15 @@
+<section class="grid grid-cols-2 gap-4">
+  @for (item of loyalityServices; track $index) {
+  <div
+    class="flex flex-col items-center justify-center w-full h-40 p-4 text-gray-500 bg-gray-200 rounded-md cursor-pointer"
+    [routerLink]="'/store/services/details'">
+    <fa-icon [icon]="item.icon" size="4x"></fa-icon>
+    <p class="mt-2 text-xs text-center capitalize">{{item.title}}</p>
+  </div>
+  }
+</section>
+<section class="flex flex-col items-center my-8">
+  <p class="text-xl font-bold">¿Necesitas algún otro servicio?</p>
+  <p class="text-sm">Contactanos podremos ayudarte</p>
+  <p-button class="my-4" severity="danger" label="Consultar Ahora" />
+</section>

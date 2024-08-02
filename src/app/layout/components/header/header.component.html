@@ -1,0 +1,44 @@
+<header class="fixed z-10 w-full bg-slate-200">
+  <div class="flex items-center justify-between px-4 py-1 mx-auto lg:max-w-7xl">
+    <div></div>
+    <div class="flex gap-4">
+      <p-button icon="pi pi-phone" label="3042157216" text size="small" severity="primary"></p-button>
+      <p-button label="Notificaciones" icon="pi pi-bell" text size="small" severity="secondary"></p-button>
+      <p-splitButton text size="small" severity="secondary" label="Adrian Manjarres" [model]="accountButtonItems" />
+    </div>
+  </div>
+</header>
+
+
+<header class="flex items-center justify-between px-4 pt-16 mx-auto lg:max-w-7xl">
+  <a routerLink="/store/store" class="cursor-pointer">
+    <img class="w-8 h-8 lg:h-16 lg:w-16" src="images/logo.png" alt=""></a>
+
+
+  <form class="mx-auto w-[512px]">
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+    <div class="relative">
+      <div class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-3">
+        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+        </svg>
+      </div>
+      <input type="search" id="default-search"
+        class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg ps-10 bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+        placeholder="Buscar Productos, Marcas..." required />
+      <button type="submit"
+        class="text-primary-900 absolute end-2.5 bottom-2.5 bg-primary-200 hover:bg-primary-300 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Buscar</button>
+    </div>
+  </form>
+
+
+  <div class="inline-flex gap-2">
+    <button type="button" routerLink="/store/checkout"
+      class="inline-flex items-center justify-center w-full h-full px-8 py-4 text-white rounded-md bg-primary-700 ">
+      <fa-icon [icon]="ctaButtonIcon" class="mr-4 text-white" size="lg"></fa-icon>
+      <span>Pedido Rapido</span>
+    </button>
+  </div>
+</header>
